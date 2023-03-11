@@ -1,7 +1,5 @@
-﻿using LiteLoader.Hook;
+using LiteLoader.Hook;
 using LiteLoader.NET;
-using System;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace Ptrarc;
@@ -10,7 +8,7 @@ public class RandomSeed : IPluginInitializer
 {
     public string Introduction => "随机种子";
     public Dictionary<string, string> MetaData => new();
-    public Version Version => new(1, 0, 0);
+    public Version Version => new();
     public void OnInitialize() => Thook.RegisterHook<RandomSeedHook, RandomSeedHookDelegate>();
 }
 
